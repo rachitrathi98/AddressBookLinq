@@ -9,7 +9,10 @@ namespace AddressBookLINQ
             Console.WriteLine("Welcome to Address Book LINQ!");
             Console.WriteLine();
             Console.WriteLine("Created DataTable for AddressBook");
-            Mgmt.CreateTable_UC2();
+            Mgmt.CreateTable();
+            Console.WriteLine();
+            Console.WriteLine("UC3 Insert Row into DataTable AddressBook");
+            Mgmt.InsertRowIntoTable();
 
         }
     }

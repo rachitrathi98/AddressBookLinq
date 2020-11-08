@@ -9,9 +9,9 @@ namespace AddressBookLINQ
     {
         public static DataTable dataTable = new DataTable();
         /// <summary>
-        /// Creates the data table
+        /// UC1: Creates the data table
         /// </summary>
-        public static void CreateTable_UC2()
+        public static void CreateTable()
         {
             dataTable.Columns.Add("FirstName", typeof(string));
             dataTable.Columns.Add("LastName", typeof(string));
@@ -28,8 +28,27 @@ namespace AddressBookLINQ
             dataTable.Rows.Add("Parth", "Trivedi", "Rajkot", "Jaamnagar", "Gujarat", 600804, "928345", "parth@gmail.com");
             dataTable.Rows.Add("Mohit", "Rathi", "Mumbai", "Thane", "Mah", 700805, "522345", "mohit@gmail.com");
 
-            DisplayDataTable();
+           // DisplayDataTable();
 
+        }
+        /// <summary>
+        /// UC2: Inserts the row into table.
+        /// </summary>
+        public static void InsertRowIntoTable()
+        {
+            DataRow dr = dataTable.NewRow();
+            dr[0] = "Akhil";
+            dr[1] = "Sharma";
+            dr[2] = "Delhi";
+            dr[3] = "Dwarka";
+            dr[4] = "ND";
+            dr[5] = 968450;
+            dr[6] = "854791";
+            dr[7] = "akhil@gmail.com";
+
+            dataTable.Rows.Add(dr);
+
+            DisplayDataTable();
         }
         /// <summary>
         /// Displays the data table.
